@@ -1,3 +1,5 @@
+import { User } from "../types";
+
 export const users = [
   {
     id: 1,
@@ -700,3 +702,5 @@ export const users = [
     signupDate: "26-Jul-2023",
   },
 ];
+
+export const getUsers = (): User[] => users;
