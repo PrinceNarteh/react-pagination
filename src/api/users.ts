@@ -703,4 +703,20 @@ export const users = [
   },
 ];
 
-export const getUsers = (): User[] => users;
+export const getUsers = ({
+  page,
+  limit,
+}: {
+  page: number;
+  limit: number;
+}): User[] => {
+  const arr: User[] = [];
+
+  for (let i = (page - 1) * limit; i < page * limit; i++) {
+    arr.push(users[i]);
+  }
+
+  return arr;
+};
+
+export const getLength = (): number => users.length;

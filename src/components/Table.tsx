@@ -17,10 +17,10 @@ const Table = ({ users }: TableProps) => {
               Full Name
             </th>
             <th scope="col" className="px-6 py-3">
-              Phone Number
+              Email
             </th>
             <th scope="col" className="px-6 py-3">
-              Email
+              Phone Number
             </th>
             <th scope="col" className="px-6 py-3">
               SignUp Date
@@ -40,8 +40,8 @@ const Table = ({ users }: TableProps) => {
               >
                 {user.fullName}
               </th>
-              <td className="px-6 py-4">{user.phoneNumber}</td>
               <td className="px-6 py-4">{user.email}</td>
+              <td className="px-6 py-4">{user.phoneNumber}</td>
               <td className="px-6 py-4">{user.signupDate}</td>
             </tr>
           ))}
