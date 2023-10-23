@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { getUsers } from "./api/users";
 import Table from "./components/Table";
+import Pagination from "./components/Pagination";
 
 function App() {
   const [page, setPage] = useState(1);
@@ -11,6 +12,7 @@ function App() {
     <>
       <h1>React Pagination</h1>
       <Table users={getUsers({ page, limit })} />
+      <Pagination />
     </>
   );
 }
